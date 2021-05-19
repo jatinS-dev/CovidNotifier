@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
+import  {Home} from "./Home"
+import  {NoMatch} from "./NoMatch"
+import {VaccineNotification} from "./VaccineNotification"
+// import {Layout} from './components/Layout';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        {/* <Layout> */}
+        <Router>
+          <Switch>
+            <Route exact path= "/" component = {Home} />
+            <Route path= "/Vaccine" component = {VaccineNotification} />
+            <Route component = {NoMatch} />
+          </Switch>
+        </Router>
+        {/* </Layout> */}
+
+      </React.Fragment>
+    );
+  }
 }
+
+
 
 export default App;
