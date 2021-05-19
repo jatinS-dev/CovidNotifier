@@ -1,0 +1,80 @@
+html,
+body {
+  min-height: 100%;
+  /* background-color: #f09e9e; */
+  /* overflow: scroll;
+  white-space: nowrap; */
+  overflow: auto;
+
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* z-index: -1; */
+  /* background: rgba(76, 175, 80, 0.3); */
+}
+.mainBody {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #fff; */
+  background-image: url("./Images/bg2.png");
+  opacity: 0.7;
+  background-color: aqua;
+}
+
+.mainDiv {
+  border: 2px solid green;
+  margin-top: 4.6rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 5%;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  border-radius: 40px;
+  text-align: center;
+  padding-bottom: 2%;
+  background-color: #ffffff;
+  z-index: 2;
+}
+.name {
+  margin-left: 0.88rem;
+  margin-right: 0.88rem;
+  /* background-color: none; */
+}
+.pin {
+  margin-left: 0.88rem;
+  margin-right: 0.88rem;
+}
+.mybutton {
+  margin-top: 2rem;
+}
+
+img {
+  padding: 5px;
+  width: 550px;
+  margin-top: 0.6rem;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.downLogo {
+  font-size: 2rem;
+  margin-left: 5rem;
+  color: #1eac5e;
+  font-weight: bold;
+  margin-top: 0%;
+  padding-top: 0%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body,
+html {
+  height: 100%;
+}
