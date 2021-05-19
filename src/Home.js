@@ -1,16 +1,16 @@
 // import Image from 'react-bootstrap/Image';
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import img1 from "./Images/bg.png";
-// import img2 from "./Images/vaccine.png";
+
+import img2 from "./Images/logo.png";
 import "./Home.css";
 import { Form, Col, Button } from "react-bootstrap";
 
 export const Home = () => (
   <div className="mainBody">
-    <div className="logo">Co-WIN Vaccine Notifier</div>
-    <div className="downLogo">#Winning_Over_Covid - 19</div>
-
+    <div className="covidlogo">
+      <img src={img2} alt="/" />
+    </div>
     <div className="mainDiv">
       <div className="name">
         <Form.Group>
