@@ -12,6 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-color: #fff;
 
   /* z-index: -1; */
   /* background: rgba(76, 175, 80, 0.3); */
@@ -58,7 +59,7 @@ body {
 .downLogo {
   font-size: 2rem;
   margin-left: 5rem;
-  color: #1eac5e;
+  /* color: #1eac5e; */
   font-weight: bold;
   margin-top: 0%;
   padding-top: 0%;
@@ -93,10 +94,10 @@ html {
   margin-top: 2.5rem;
 }
 .card {
-  background-color: #ffff;
+  background-color: #ffffff;
 }
 .card-body {
-  background: #fff;
+  background: #ffffff;
 }
 .card-header {
   color: black;

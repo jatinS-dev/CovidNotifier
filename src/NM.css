@@ -1,0 +1,30 @@
+.cowinlog {
+  height: 200px;
+  width: 200px;
+}
+.done {
+  margin-top: 10rem;
+  margin-left: 38.54545rem;
+}
+
+.pokk {
+  position: absolute;
+  margin-top: 1rem;
+  font-size: 50px;
+  margin-left: 0rem;
+  color: forestgreen;
+}
+.pook11 {
+  position: absolute;
+  margin-top: 5rem;
+  font-size: 50px;
+  margin-left: -15rem;
+  color: forestgreen;
+}
+.cli {
+  position: absolute;
+  margin-top: 10rem;
+  font-size: 30px;
+  margin-left: -12rem;
+  /* color: forestgreen; */
+}

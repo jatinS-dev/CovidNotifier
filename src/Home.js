@@ -70,6 +70,7 @@ export const Home = () => (
         </Button>{" "}
       </div>
     </div>
+
     <div className="FAQ">*General Questions/ FAQ</div>
     <div className="acco">
       <Accordion defaultActiveKey="0" className="pokemon">
@@ -102,7 +103,7 @@ export const Home = () => (
           <Accordion.Toggle as={Card.Header} eventKey="2">
             Is my personal data collected?
           </Accordion.Toggle>
-          <Accordion.Collapse eventKey="1">
+          <Accordion.Collapse eventKey="2">
             <Card.Body>
               No we do not collect any personal data from the user. This site
               remains 100% transparent. Any queries contact the developers

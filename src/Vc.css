@@ -1,18 +1,14 @@
 h1 {
   position: absolute;
-  margin-top: 35rem;
+  margin-top: 25rem;
   font-size: 50px;
-  margin-left: 30rem;
+  margin-left: 28rem;
   color: forestgreen;
 }
 
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  background: rgb(84, 219, 84);
 }
 
 .wrapper {

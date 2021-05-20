@@ -18,6 +18,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/Vaccine" component={VaccineNotification} />
             <Route component={NoMatch} />
+            <Route component={NoMatch} />
           </Switch>
         </Router>
         {/* </Layout> */}
