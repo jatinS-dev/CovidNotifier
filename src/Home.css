@@ -5,12 +5,14 @@ body {
   /* overflow: scroll;
   white-space: nowrap; */
   overflow: auto;
+  font-family: "Ubuntu", sans-serif;
 
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
   /* z-index: -1; */
   /* background: rgba(76, 175, 80, 0.3); */
 }
@@ -75,12 +77,12 @@ html {
   margin-top: 2rem;
   margin-left: 25rem;
   margin-right: 23rem;
-  margin-bottom: 23rem;
+  margin-bottom: 2rem;
   padding-bottom: 5rem;
   /* background-color: #1eac5e; */
 }
 .accord {
-  color: black;
+  color: #ffff;
 }
 
 .FAQ {
@@ -89,4 +91,19 @@ html {
   font-weight: bolder;
   color: #1eac5e;
   margin-top: 2.5rem;
+}
+.card {
+  background-color: #ffff;
+}
+.card-body {
+  background: #fff;
+}
+.card-header {
+  color: black;
+  padding-left: 22%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: larger;
+}
+.page-footer {
+  background-color: rgba(67, 218, 125, 0.6);
 }

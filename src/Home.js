@@ -65,7 +65,7 @@ export const Home = () => (
         </div>
       </div>
       <div className="mybutton">
-        <Button variant="outline-danger" size="lg">
+        <Button variant="danger" size="lg">
           Get Notified
         </Button>{" "}
       </div>
@@ -110,6 +110,15 @@ export const Home = () => (
           </Accordion.Collapse>
         </Card>
       </Accordion>
+    </div>
+
+    <div className="myFooter">
+      <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">
+          © 2020 Copyright:
+          <a href="/"> Covid Relief Ninjas</a>
+        </div>
+      </footer>
     </div>
   </div>
 );
