@@ -1,7 +1,7 @@
 // import Image from 'react-bootstrap/Image';
 import React, { useEffect, useState } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { getAvailabilityByPin } from "./api";
+import { getAvailabilityByPin, getAvailabilityByDistrict } from "./api";
 import img2 from "./Images/logo.png";
 import { NoMatch } from "./NoMatch";
 
@@ -16,6 +16,14 @@ export const VaccineNotification = (props) => {
   useEffect(() => {
     if (values.method === "pincode") {
       getAvailabilityByPin(values.pincode)
+        .then(({ available }) => {
+          if (available) {
+            setFound(true);
+          }
+        })
+    }
+    else if (values.method === "district") {
+      getAvailabilityByDistrict(values.districtCode)
         .then(({ available }) => {
           if (available) {
             setFound(true);

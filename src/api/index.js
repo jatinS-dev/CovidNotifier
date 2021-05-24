@@ -11,3 +11,12 @@ export const getAvailabilityByPin = async (pincode) => {
     })
     return data;
 }
+
+export const getAvailabilityByDistrict = async (districtCode) => {
+    const date = moment().format("DD-MM-YYYY");
+    const { data } = await axios({
+        url: `/availability/district?district_id=${districtCode}&date=${date}`,
+        method: `get`
+    })
+    return data;
+}
