@@ -13,17 +13,16 @@ export const Home = () => {
 
   const onGetNotified = () => {
     if (districtCode) {
-      history.push("/vaccine", { districtCode, method: "district" })
+      history.push("/vaccine", { districtCode, method: "district" });
+    } else {
+      history.push("/vaccine", { pincode: pin, method: "pincode" });
     }
-    else {
-      history.push("/vaccine", { pincode: pin, method: "pincode" })
-    }
-  }
+  };
 
   const onDistrictCodeSelect = (e) => {
     const code = e.target.value.match(/(\d+)/)[0];
     setDistrictCode(code);
-  }
+  };
 
   return (
     <div className="mainBody">
@@ -31,14 +30,14 @@ export const Home = () => {
         <img src={img2} alt="/" className="cowinlogo" />
       </div>
       <div className="mainDiv">
-        <div className="name">
-          <Form.Group>
-            <Form.Control size="lg" type="text" placeholder="Name" />
-          </Form.Group>
-        </div>
         <div className="state">
           <Form.Group as={Col} controlId="formGridState">
-            <Form.Control size="lg" as="select" defaultValue="Choose..." onChange={onDistrictCodeSelect}>
+            <Form.Control
+              size="lg"
+              as="select"
+              defaultValue="Choose..."
+              onChange={onDistrictCodeSelect}
+            >
               <option>- District -</option>
               <option value="582 Adilabad">582 Adilabad</option>
               <option value="320 Agar">320 Agar</option>
@@ -46,7 +45,7 @@ export const Home = () => {
               <option value="154 Ahmedabad">154 Ahmedabad</option>
               <option value="770 Ahmedabad Corporation">
                 770 Ahmedabad Corporation
-          </option>
+              </option>
               <option value="391 Ahmednagar">391 Ahmednagar</option>
               <option value="425 Aizawl East">425 Aizawl East</option>
               <option value="426 Aizawl West">426 Aizawl West</option>
@@ -56,7 +55,7 @@ export const Home = () => {
               <option value="623 Aligarh">623 Aligarh</option>
               <option value="710 Alipurduar District">
                 710 Alipurduar District
-          </option>
+              </option>
               <option value="357 Alirajpur">357 Alirajpur</option>
               <option value="704 Almora">704 Almora</option>
               <option value="512 Alwar">512 Alwar</option>
@@ -118,7 +117,7 @@ export const Home = () => {
               <option value="343 Barwani">343 Barwani</option>
               <option value="712 Basirhat HD (North 24 Parganas)">
                 712 Basirhat HD (North 24 Parganas)
-          </option>
+              </option>
               <option value="113 Bastar">113 Bastar</option>
               <option value="638 Basti">638 Basti</option>
               <option value="493 Bathinda">493 Bathinda</option>
@@ -132,7 +131,7 @@ export const Home = () => {
               <option value="687 Bhadohi">687 Bhadohi</option>
               <option value="583 Bhadradri Kothagudem">
                 583 Bhadradri Kothagudem
-          </option>
+              </option>
               <option value="454 Bhadrak">454 Bhadrak</option>
               <option value="82 Bhagalpur">82 Bhagalpur</option>
               <option value="370 Bhandara">370 Bhandara</option>
@@ -141,7 +140,7 @@ export const Home = () => {
               <option value="175 Bhavnagar">175 Bhavnagar</option>
               <option value="771 Bhavnagar Corporation">
                 771 Bhavnagar Corporation
-          </option>
+              </option>
               <option value="523 Bhilwara">523 Bhilwara</option>
               <option value="351 Bhind">351 Bhind</option>
               <option value="200 Bhiwani">200 Bhiwani</option>
@@ -157,7 +156,7 @@ export const Home = () => {
               <option value="398 Bishnupur">398 Bishnupur</option>
               <option value="714 Bishnupur HD (Bankura)">
                 714 Bishnupur HD (Bankura)
-          </option>
+              </option>
               <option value="765 Biswanath">765 Biswanath</option>
               <option value="242 Bokaro">242 Bokaro</option>
               <option value="57 Bongaigaon">57 Bongaigaon</option>
@@ -206,7 +205,7 @@ export const Home = () => {
               <option value="457 Cuttack">457 Cuttack</option>
               <option value="137 Dadra and Nagar Haveli">
                 137 Dadra and Nagar Haveli
-          </option>
+              </option>
               <option value="182 Dahod">182 Dahod</option>
               <option value="716 Dakshin Dinajpur">716 Dakshin Dinajpur</option>
               <option value="269 Dakshina Kannada">269 Dakshina Kannada</option>
@@ -239,7 +238,7 @@ export const Home = () => {
               <option value="388 Dhule">388 Dhule</option>
               <option value="718 Diamond Harbor HD (S 24 Parganas)">
                 718 Diamond Harbor HD (S 24 Parganas)
-          </option>
+              </option>
               <option value="25 Dibang Valley">25 Dibang Valley</option>
               <option value="43 Dibrugarh">43 Dibrugarh</option>
               <option value="67 Dima Hasao">67 Dima Hasao</option>
@@ -258,7 +257,7 @@ export const Home = () => {
               <option value="11 East Godavari">11 East Godavari</option>
               <option value="418 East Jaintia Hills">
                 418 East Jaintia Hills
-          </option>
+              </option>
               <option value="23 East Kameng">23 East Kameng</option>
               <option value="414 East Khasi Hills">414 East Khasi Hills</option>
               <option value="42 East Siang">42 East Siang</option>
@@ -284,16 +283,16 @@ export const Home = () => {
               <option value="153 Gandhinagar">153 Gandhinagar</option>
               <option value="772 Gandhinagar Corporation">
                 772 Gandhinagar Corporation
-          </option>
+              </option>
               <option value="449 Ganjam">449 Ganjam</option>
               <option value="243 Garhwa">243 Garhwa</option>
               <option value="120 Gariaband">120 Gariaband</option>
               <option value="136 Gaurela Pendra Marwahi">
                 136 Gaurela Pendra Marwahi
-          </option>
+              </option>
               <option value="650 Gautam Buddha Nagar">
                 650 Gautam Buddha Nagar
-          </option>
+              </option>
               <option value="79 Gaya">79 Gaya</option>
               <option value="651 Ghaziabad">651 Ghaziabad</option>
               <option value="652 Ghazipur">652 Ghazipur</option>
@@ -340,7 +339,7 @@ export const Home = () => {
               <option value="314 Indore">314 Indore</option>
               <option value="17 Itanagar Capital Complex">
                 17 Itanagar Capital Complex
-          </option>
+              </option>
               <option value="315 Jabalpur">315 Jabalpur</option>
               <option value="459 Jagatsinghpur">459 Jagatsinghpur</option>
               <option value="584 Jagtial">584 Jagtial</option>
@@ -358,7 +357,7 @@ export const Home = () => {
               <option value="169 Jamnagar">169 Jamnagar</option>
               <option value="773 Jamnagar Corporation">
                 773 Jamnagar Corporation
-          </option>
+              </option>
               <option value="259 Jamtara">259 Jamtara</option>
               <option value="107 Jamui">107 Jamui</option>
               <option value="585 Jangaon">585 Jangaon</option>
@@ -367,7 +366,7 @@ export const Home = () => {
               <option value="660 Jaunpur">660 Jaunpur</option>
               <option value="586 Jayashankar Bhupalpally">
                 586 Jayashankar Bhupalpally
-          </option>
+              </option>
               <option value="91 Jehanabad">91 Jehanabad</option>
               <option value="340 Jhabua">340 Jhabua</option>
               <option value="189 Jhajjar">189 Jhajjar</option>
@@ -384,7 +383,7 @@ export const Home = () => {
               <option value="178 Junagadh">178 Junagadh</option>
               <option value="774 Junagadh Corporation">
                 774 Junagadh Corporation
-          </option>
+              </option>
               <option value="80 Kaimur">80 Kaimur</option>
               <option value="190 Kaithal">190 Kaithal</option>
               <option value="413 Kakching">413 Kakching</option>
@@ -396,7 +395,7 @@ export const Home = () => {
               <option value="24 Kamle">24 Kamle</option>
               <option value="49 Kamrup Metropolitan">
                 49 Kamrup Metropolitan
-          </option>
+              </option>
               <option value="50 Kamrup Rural">50 Kamrup Rural</option>
               <option value="557 Kanchipuram">557 Kanchipuram</option>
               <option value="450 Kandhamal">450 Kandhamal</option>
@@ -485,7 +484,7 @@ export const Home = () => {
               <option value="438 Longleng">438 Longleng</option>
               <option value="31 Lower Dibang Valley">
                 31 Lower Dibang Valley
-          </option>
+              </option>
               <option value="18 Lower Siang">18 Lower Siang</option>
               <option value="32 Lower Subansiri">32 Lower Subansiri</option>
               <option value="670 Lucknow">670 Lucknow</option>
@@ -553,7 +552,7 @@ export const Home = () => {
               <option value="382 Nanded">382 Nanded</option>
               <option value="729 Nandigram HD (East Medinipore)">
                 729 Nandigram HD (East Medinipore)
-          </option>
+              </option>
               <option value="387 Nandurbar">387 Nandurbar</option>
               <option value="613 Narayanpet">613 Narayanpet</option>
               <option value="129 Narayanpur">129 Narayanpur</option>
@@ -570,10 +569,12 @@ export const Home = () => {
               <option value="599 Nirmal">599 Nirmal</option>
               <option value="600 Nizamabad">600 Nizamabad</option>
               <option value="412 Noney">412 Noney</option>
-              <option value="730 North 24 Parganas">730 North 24 Parganas</option>
+              <option value="730 North 24 Parganas">
+                730 North 24 Parganas
+              </option>
               <option value="1 North and Middle Andaman">
                 1 North and Middle Andaman
-          </option>
+              </option>
               <option value="146 North Delhi">146 North Delhi</option>
               <option value="147 North East Delhi">147 North East Delhi</option>
               <option value="423 North Garo Hills">423 North Garo Hills</option>
@@ -601,7 +602,7 @@ export const Home = () => {
               <option value="385 Parbhani">385 Parbhani</option>
               <option value="731 Paschim Medinipore">
                 731 Paschim Medinipore
-          </option>
+              </option>
               <option value="161 Patan">161 Patan</option>
               <option value="300 Pathanamthitta">300 Pathanamthitta</option>
               <option value="486 Pathankot">486 Pathankot</option>
@@ -641,7 +642,7 @@ export const Home = () => {
               <option value="173 Rajkot">173 Rajkot</option>
               <option value="775 Rajkot Corporation">
                 775 Rajkot Corporation
-          </option>
+              </option>
               <option value="131 Rajnandgaon">131 Rajnandgaon</option>
               <option value="237 Rajouri">237 Rajouri</option>
               <option value="518 Rajsamand">518 Rajsamand</option>
@@ -652,7 +653,7 @@ export const Home = () => {
               <option value="683 Rampur">683 Rampur</option>
               <option value="734 Rampurhat HD (Birbhum)">
                 734 Rampurhat HD (Birbhum)
-          </option>
+              </option>
               <option value="240 Ranchi">240 Ranchi</option>
               <option value="603 Rangareddy">603 Rangareddy</option>
               <option value="781 Ranipet">781 Ranipet</option>
@@ -693,7 +694,7 @@ export const Home = () => {
               <option value="618 Sepahijala">618 Sepahijala</option>
               <option value="248 Seraikela Kharsawan">
                 248 Seraikela Kharsawan
-          </option>
+              </option>
               <option value="430 Serchhip">430 Serchhip</option>
               <option value="148 Shahdara">148 Shahdara</option>
               <option value="332 Shahdol">332 Shahdol</option>
@@ -732,7 +733,9 @@ export const Home = () => {
               <option value="693 Sonbhadra">693 Sonbhadra</option>
               <option value="198 Sonipat">198 Sonipat</option>
               <option value="64 Sonitpur">64 Sonitpur</option>
-              <option value="735 South 24 Parganas">735 South 24 Parganas</option>
+              <option value="735 South 24 Parganas">
+                735 South 24 Parganas
+              </option>
               <option value="2 South Andaman">2 South Andaman</option>
               <option value="149 South Delhi">149 South Delhi</option>
               <option value="144 South East Delhi">144 South East Delhi</option>
@@ -740,21 +743,23 @@ export const Home = () => {
               <option value="152 South Goa">152 South Goa</option>
               <option value="768 South Salmara Mankachar">
                 768 South Salmara Mankachar
-          </option>
+              </option>
               <option value="538 South Sikkim">538 South Sikkim</option>
               <option value="619 South Tripura">619 South Tripura</option>
               <option value="150 South West Delhi">150 South West Delhi</option>
               <option value="422 South West Garo Hills">
                 422 South West Garo Hills
-          </option>
+              </option>
               <option value="415 South West Khasi Hills">
                 415 South West Khasi Hills
-          </option>
+              </option>
               <option value="509 Sri Ganganagar">509 Sri Ganganagar</option>
-              <option value="490 Sri Muktsar Sahib">490 Sri Muktsar Sahib</option>
+              <option value="490 Sri Muktsar Sahib">
+                490 Sri Muktsar Sahib
+              </option>
               <option value="13 Sri Potti Sriramulu Nellore">
                 13 Sri Potti Sriramulu Nellore
-          </option>
+              </option>
               <option value="14 Srikakulam">14 Srikakulam</option>
               <option value="220 Srinagar">220 Srinagar</option>
               <option value="466 Subarnapur">466 Subarnapur</option>
@@ -764,7 +769,9 @@ export const Home = () => {
               <option value="72 Supaul">72 Supaul</option>
               <option value="133 Surajpur">133 Surajpur</option>
               <option value="165 Surat">165 Surat</option>
-              <option value="776 Surat Corporation">776 Surat Corporation</option>
+              <option value="776 Surat Corporation">
+                776 Surat Corporation
+              </option>
               <option value="157 Surendranagar">157 Surendranagar</option>
               <option value="134 Surguja">134 Surguja</option>
               <option value="606 Suryapet">606 Suryapet</option>
@@ -780,10 +787,10 @@ export const Home = () => {
               <option value="569 Theni">569 Theni</option>
               <option value="296 Thiruvananthapuram">
                 296 Thiruvananthapuram
-          </option>
+              </option>
               <option value="554 Thoothukudi (Tuticorin)">
                 554 Thoothukudi (Tuticorin)
-          </option>
+              </option>
               <option value="405 Thoubal">405 Thoubal</option>
               <option value="303 Thrissur">303 Thrissur</option>
               <option value="325 Tikamgarh">325 Tikamgarh</option>
@@ -801,7 +808,9 @@ export const Home = () => {
               <option value="288 Tumkur">288 Tumkur</option>
               <option value="504 Udaipur">504 Udaipur</option>
               <option value="65 Udalguri">65 Udalguri</option>
-              <option value="705 Udham Singh Nagar">705 Udham Singh Nagar</option>
+              <option value="705 Udham Singh Nagar">
+                705 Udham Singh Nagar
+              </option>
               <option value="233 Udhampur">233 Udhampur</option>
               <option value="286 Udupi">286 Udupi</option>
               <option value="318 Ujjain">318 Ujjain</option>
@@ -818,7 +827,7 @@ export const Home = () => {
               <option value="155 Vadodara">155 Vadodara</option>
               <option value="777 Vadodara Corporation">
                 777 Vadodara Corporation
-          </option>
+              </option>
               <option value="89 Vaishali">89 Vaishali</option>
               <option value="167 Valsad">167 Valsad</option>
               <option value="696 Varanasi">696 Varanasi</option>
@@ -843,11 +852,11 @@ export const Home = () => {
               <option value="16 West Godavari">16 West Godavari</option>
               <option value="416 West Jaintia Hills">
                 416 West Jaintia Hills
-          </option>
+              </option>
               <option value="28 West Kameng">28 West Kameng</option>
               <option value="769 West Karbi Anglong">
                 769 West Karbi Anglong
-          </option>
+              </option>
               <option value="419 West Khasi Hills">419 West Khasi Hills</option>
               <option value="38 West Siang">38 West Siang</option>
               <option value="536 West Sikkim">536 West Sikkim</option>
@@ -856,28 +865,17 @@ export const Home = () => {
               <option value="436 Wokha">436 Wokha</option>
               <option value="611 Yadadri Bhuvanagiri">
                 611 Yadadri Bhuvanagiri
-          </option>
+              </option>
               <option value="285 Yadgir">285 Yadgir</option>
               <option value="197 Yamunanagar">197 Yamunanagar</option>
               <option value="478 Yanam">478 Yanam</option>
               <option value="368 Yavatmal">368 Yavatmal</option>
               <option value="6 YSR District, Kadapa (Cuddapah)">
                 6 YSR District, Kadapa (Cuddapah)
-          </option>
+              </option>
               <option value="442 Zunheboto">442 Zunheboto</option>
             </Form.Control>
           </Form.Group>
-
-          <div className="email">
-            <div className="name">
-              <Form.Group>
-                <Form.Control size="lg" type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-            </Form.Text>
-              </Form.Group>
-            </div>
-          </div>
 
           <div className="name">
             <Form.Group>
@@ -888,76 +886,74 @@ export const Home = () => {
               />
             </Form.Group>
 
-            <div className="name">
-              <Form.Group>
-                <Form.Control size="lg" type="text" placeholder="City Name" />
-              </Form.Group>
-            </div>
-
             <div className="pin">
               <Form.Group>
-                <Form.Control size="lg" type="text" placeholder="Pin Code" onChange={(e) => setPin(e.target.value)} />
+                <Form.Control
+                  size="lg"
+                  type="text"
+                  placeholder="Pin Code"
+                  onChange={(e) => setPin(e.target.value)}
+                />
               </Form.Group>
             </div>
           </div>
           <div className="mybutton">
             <Button variant="danger" size="lg" onClick={onGetNotified}>
               Get Notified
-      </Button>{" "}
+            </Button>{" "}
           </div>
         </div>
+      </div>
+      <div className="FAQ">*General Questions/ FAQ</div>
+      <div className="acco">
+        <Accordion defaultActiveKey="0" className="pokemon">
+          <Card>
+            <Accordion.Toggle as={Card.Header} eventKey="0">
+              How this site works?
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body>
+                Just enter either your pincode or state and district and this
+                site will give you instant notification whenever we detect an
+                availability. Note that to receive notification you have to keep
+                the site open
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card>
+            <Accordion.Toggle as={Card.Header} eventKey="1">
+              How will I receive the notification?
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>
+                This site will make a bell like sound whenever an availability
+                is detected. We suggest you to also keep cowin site open in
+                order to immediately book the slot.
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card>
+            <Accordion.Toggle as={Card.Header} eventKey="2">
+              Is my personal data collected?
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="2">
+              <Card.Body>
+                No we do not collect any personal data from the user. This site
+                remains 100% transparent. Any queries contact the developers
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
+      </div>
 
-        <div className="FAQ">*General Questions/ FAQ</div>
-        <div className="acco">
-          <Accordion defaultActiveKey="0" className="pokemon">
-            <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="0">
-                How this site works?
-        </Accordion.Toggle>
-              <Accordion.Collapse eventKey="0">
-                <Card.Body>
-                  Just enter either your pincode or state and district and this site
-                  will give you instant notification whenever we detect an
-                  availability. Note that to receive notification you have to keep
-                  the site open
-          </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="1">
-                How will I receive the notification?
-        </Accordion.Toggle>
-              <Accordion.Collapse eventKey="1">
-                <Card.Body>
-                  This site will make a bell like sound whenever an availability is
-                  detected. We suggest you to also keep cowin site open in order to
-                  immediately book the slot.
-          </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="2">
-                Is my personal data collected?
-        </Accordion.Toggle>
-              <Accordion.Collapse eventKey="2">
-                <Card.Body>
-                  No we do not collect any personal data from the user. This site
-                  remains 100% transparent. Any queries contact the developers
-          </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-          </Accordion>
-        </div>
-
-        <div className="myFooter">
-          <footer class="page-footer font-small blue">
-            <div class="footer-copyright text-center py-3">
-              © 2020 Copyright:
-        <a href="/"> Covid Relief Ninjas</a>
-            </div>
-          </footer>
-        </div>
+      <div className="myFooter">
+        <footer class="page-footer font-small blue">
+          <div class="footer-copyright text-center py-3">
+            © 2020 Copyright:
+            <a href="/"> Covid Relief Ninjas</a>
+          </div>
+        </footer>
       </div>
     </div>
-  )
-}
+  );
+};
